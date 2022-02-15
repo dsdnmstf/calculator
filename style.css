@@ -1,6 +1,6 @@
 .main_div {
   width: 420px;
-  height: 680px;
+  height: 600px;
   background-color: black;
   margin: 1rem auto;
 }
@@ -31,6 +31,7 @@
   margin: 0.5rem;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   
 }
