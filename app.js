@@ -10,12 +10,10 @@ console.log(operators);
 const clear = document.querySelector(".clear");
 const pozNeg = document.querySelector(".pozNeg");
 pozNeg.addEventListener("click", () => {
-  if (!second.textContent || !second.textContent.includes("-")) {
-    if (second.textContent.startsWith("-")) {
-      second.textContent.replace("-");
-    } else {
-      second.textContent = minus.concat(second.textContent);
-    }
+  if (second.textContent.includes("-")) {
+    second.textContent = second.textContent.replace("-", "");
+  } else {
+    second.textContent = minus.concat(second.textContent);
   }
 });
 
@@ -30,7 +28,6 @@ clear.addEventListener("click", () => {
 });
 for (let i in number) {
   number[i].onclick = () => {
-    console.log(resoult, typeof resoult);
     if (parseFloat(second.textContent) !== resoult) {
       second.textContent += number[i].textContent;
     }
